@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paper Clip</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+    .field-group {
+      width: 100%;
+      display: flex;
+      max-width: 420px;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+</style>
+</head>
+<body>
+
+    <nav class="navbar">
+  <a href="index.html" class="logo">
+        <img src="./assets/logo.png" height="45px" width="90px" />
+      </a>
+</nav>
+
+<div class="paper-bg">
+  <div class="auth-card">
+    <h1>LOGIN</h1>
+
+    <div class="field-group" style="width:100%">
+      <label>EMAIL</label>
+      <input type="email" placeholder="eg. sample123@gmail.com">
+    </div>
+
+    <div class="field-group" style="width:100%">
+      <label>PASSWORD</label>
+      <input type="password" placeholder="">
+    </div>
+
+    <a href="forgot-password.html" class="forgot-link">Forgot password</a>
+
+    <button class="btn-black"><a href="shop.html">SIGN IN</a></button>
+
+    <p class="auth-link">New customer? <a href="signup.html">Create an account</a></p>
+  </div>
+</div>
+
+</body>
+</html>

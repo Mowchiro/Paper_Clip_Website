@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Clip – Inventory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+<style>
+
+.add-btn {
+    background-color: #1a1a1a; 
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-btn:hover {
+    background-color: #444;
+}
+
+.inventory-tools {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.table-search, .table-filter {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.85rem;
+}
+
+.table-search {
+    flex: 2; 
+}
+
+.table-filter {
+    flex: 1;
+}
+
+.stock-status {
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.in-stock { background: #d4edda; color: #155724; }    
+.low-stock { background: #fff3cd; color: #856404; } 
+.out-of-stock { background: #f8d7da; color: #721c24; } 
+
+.edit-icon, .delete-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0 4px;
+    transition: transform 0.1s;
+}
+
+.edit-icon:hover, .delete-icon:hover {
+    transform: scale(1.2);
+}
+
+.data-table thead th {
+    background-color: #404040; 
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.data-table td {
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR-->
+<nav class="navbar">
+    <a href="index.html" class="logo">
+        <img src="./assets/logo.png" height="45px" width="90px" />
+    </a>
+    <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <div class="nav-right">
+        <div class="search-bar">
+            <img src="./assets/search-icon.png" width="16px" height="16px" />
+            <input type="text" placeholder="Search inventory..." />
+            <button class="clear-btn">✕</button>
+        </div>
+        <a href="profile.html"><img src="./assets/profile-icon.png" width="30px" height="30px" class="nav-icon" /></a>
+        <a href="cart.html"><img src="./assets/cart-icon.png" width="30px" height="30px" class="nav-icon" /></a>
+    </div>
+</nav>
+
+<h1 class="dashboard-title">DASHBOARD</h1>
+
+<div class="dashboard-layout">
+    <!-- SIDEBAR -->
+    <nav class="sidebar">
+    <a href="dashboard.html">ADMIN DASHBOARD</a>
+    <a href="inventory.html" class="active">INVENTORY</a>
+    <a href="order-tracker.html">ORDER TRACKER</a>
+    <a href="settings.html">SETTINGS</a>
+  </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="dashboard-content">
+        <div class="dash-inner">
+            <!-- Section Header with "Add Product" button -->
+            <div class="dash-section-header">
+                <h3>PRODUCT INVENTORY</h3>
+                <button class="add-btn">+ ADD PRODUCT</button>
+            </div>
+
+            <div style="padding: 1.5rem;">
+                <!-- Simple Filter Bar -->
+                <div class="inventory-tools">
+                    <input type="text" placeholder="Quick search product..." class="table-search">
+                    <select class="table-filter">
+                        <option>All Categories</option>
+                        <option>Stationery</option>
+                        <option>Writing Tools</option>
+                        <option>Collectibles</option>
+                    </select>
+                </div>
+
+                <!-- Data Table -->
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Product Name</th>
+                            <th>Category</th>
+                            <th>Stock</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#001</td>
+                            <td>Ballpoint Set</td>
+                            <td>Writing Tools</td>
+                            <td><span class="stock-status in-stock">45</span></td>
+                            <td>₱150.00</td>
+                            <td><button class="edit-icon">✏️</button> <button class="delete-icon">🗑️</button></td>
+                        </tr>
+                        <tr>
+                            <td>#002</td>
+                            <td>Collectible Gacha</td>
+                            <td>Collectibles</td>
+                            <td><span class="stock-status low-stock">5</span></td>
+                            <td>₱350.00</td>
+                            <td><button class="edit-icon">✏️</button> <button class="delete-icon">🗑️</button></td>
+                        </tr>
+                        <tr>
+                            <td>#003</td>
+                            <td>BINI Keychain</td>
+                            <td>Collectibles</td>
+                            <td><span class="stock-status in-stock">120</span></td>
+                            <td>₱120.00</td>
+                            <td><button class="edit-icon">✏️</button> <button class="delete-icon">🗑️</button></td>
+                        </tr>
+                        <tr>
+                            <td>#004</td>
+                            <td>Yellow Pad Paper</td>
+                            <td>Stationery</td>
+                            <td><span class="stock-status out-of-stock">0</span></td>
+                            <td>₱65.00</td>
+                            <td><button class="edit-icon">✏️</button> <button class="delete-icon">🗑️</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

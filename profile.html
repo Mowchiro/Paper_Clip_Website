@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile – Paper Clip</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .main-container {
+        max-width: 1300px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+
+      .breadcrumb {
+        margin-bottom: 20px;
+      }
+
+      .back-link {
+        text-decoration: none;
+        color: #888;
+        font-size: 0.9rem;
+        padding: 5px 15px;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        transition: 0.3s;
+      }
+
+      .back-link:hover {
+        background: #f5f5f5;
+        color: #333;
+      }
+
+      .profile-grid {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+      }
+
+      .user-sidebar {
+        flex: 0 0 300px;
+      }
+
+      .profile-card {
+        background: white;
+        border: 1px solid #eee;
+        border-radius: 12px;
+        padding: 30px 20px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+      }
+
+      .avatar-circle {
+        width: 100px;
+        height: 100px;
+        background: #e0e0e0;
+        border-radius: 50%;
+        margin: 0 auto 15px;
+        overflow: hidden;
+      }
+
+      .avatar-circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .user-email {
+        font-size: 0.85rem;
+        color: #777;
+        margin-bottom: 20px;
+      }
+
+      .divider {
+        border: 0;
+        border-top: 1px solid #eee;
+        margin: 20px 0;
+      }
+
+      .profile-menu {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+      }
+
+      .profile-menu li a {
+        display: block;
+        padding: 12px 15px;
+        text-decoration: none;
+        color: #555;
+        border-radius: 8px;
+        margin-bottom: 5px;
+        font-size: 0.95rem;
+      }
+
+      .profile-menu li a.active {
+        background: #b8c8b0;
+        color: white;
+        font-weight: 600;
+      }
+
+      .profile-menu li a:hover:not(.active) {
+        background: #f9f9f9;
+      }
+
+      .logout-text {
+        color: #d9534f !important;
+      }
+
+      .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+      }
+
+      .order-section {
+        flex: 1;
+      }
+
+      .col-id {
+        min-width: 130px;
+        color: #666;
+      }
+
+      .content-box {
+        background: white;
+        border: 1px solid #eee;
+        border-radius: 12px;
+        padding: 30px;
+        min-height: 400px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+      }
+
+      .section-title {
+        font-family: "Playfair Display", serif;
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+      }
+
+      .order-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .order-table th {
+        text-align: left;
+        padding: 15px;
+        border-bottom: 2px solid #f0f0f0;
+        font-weight: 700;
+        color: #444;
+      }
+
+      .order-table td {
+        padding: 20px 15px;
+        border-bottom: 1px solid #f7f7f7;
+        font-size: 0.9rem;
+      }
+
+      /* Status Tags */
+      .status-tag {
+        padding: 5px 12px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+
+      .shipping {
+        background: #d1ecf1;
+        color: #0c5460;
+      }
+
+      .delivered {
+        background: #d4edda;
+        color: #155724;
+      }
+
+      /* Thumbnail */
+      .product-thumb {
+        width: 45px;
+        height: 45px;
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+      }
+
+      .order-table th,
+      .order-table td {
+        padding: 20px 15px;
+        text-align: left;
+      }
+
+      .order-table td:nth-child(3) {
+        min-width: 180px;
+      }
+
+      .order-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+
+      .order-table tr:hover {
+        background-color: #fafafa;
+      }
+
+      @media (max-width: 992px) {
+        .profile-grid {
+          flex-direction: column;
+        }
+
+        .user-sidebar {
+          width: 100%;
+          flex: none;
+        }
+
+        .order-section {
+          width: 100%;
+        }
+
+        .section-title {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="./assets/logo.png" height="45px" width="90px" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="search-bar">
+          <input type="text" placeholder="Taking notes" />
+          <button class="clear-btn">✕</button>
+        </div>
+        <img src="./assets/profile-icon.png" width="30px" class="nav-icon" />
+        <img src="./assets/cart-icon.png" width="30px" class="nav-icon" />
+      </div>
+    </nav>
+
+    <div class="main-container">
+      <div class="breadcrumb">
+        <a href="shop.html" class="back-link"> < Back </a>
+      </div>
+
+      <div class="profile-grid">
+        <!-- Sidebar -->
+        <aside class="user-sidebar">
+          <div class="profile-card">
+            <div class="avatar-circle">
+              <img src="./assets/profile-icon.png" style = "width: 100%; height: 100%; align-content: center;">
+            </div>
+            <h3>Hello World</h3>
+            <p class="user-email">sample123@email.com</p>
+            <hr class="divider" />
+            <ul class="profile-menu">
+              <li><a href="#" class="active">My Orders</a></li>
+              <li><a href="#">Wishlist</a></li>
+              <li><a href="#">Account Settings</a></li>
+              <li><a href="index.html" class="logout-text">Log Out</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <section class="order-section">
+          <div class="content-box">
+            <h2 class="section-title">Order History</h2>
+            <!-- Wrapped for responsiveness -->
+            <div class="table-responsive">
+              <table class="order-table">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th class="col-id">Order ID</th>
+                    <!-- Added class for width -->
+                    <th>Product Name</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="product-thumb"><img src="./assets/product-7.png" width="100%" height="100%" /></div>
+                    </td>
+                    <td class="col-id">#2921410293</td>
+                    <td><strong>Planted Wood Ruled Craft Notebook (Pack of 5) - 36 Sheets</strong></td>
+                    <td>May 05, 2026</td>
+                    <td><span class="status-tag shipping">Shipped</span></td>
+                    <td>₱290.00</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="product-thumb"><img src="./assets/product-3.png" width="100%" height="100%" /></div>
+                    </td>
+                    <td class="col-id">#13353478</td>
+                    <td><strong>.The Craft Central INK Philippine Washi Tapes - 15mm</strong></td>
+                    <td>April 20, 2026</td>
+                    <td><span class="status-tag delivered">Delivered</span></td>
+                    <td>₱189.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="./assets/logo-white.png" height="85px" width="130px" />
+          </a>
+          <p class="footer-desc">
+            A well-crafted shop of trinkets and stationary for those who write &
+            dream of a better world.
+          </p>
+          <div class="footer-contact">
+            <div class="contact-row">
+              <img
+                src="./assets/location-icon.png"
+                width="16px"
+                height="16px"
+              />
+              0123 Silang, Cavite, Philippines
+            </div>
+            <div class="contact-row">
+              <img src="./assets/phone-call.png" width="14px" height="14px" />
+              +63901234356
+            </div>
+            <div class="contact-row">
+              <img src="./assets/email.png" width="14px" height="14px" />
+              paperclipph@gmail.com
+            </div>
+          </div>
+        </div>
+        <div class="footer-info">
+          <h4>INFORMATION</h4>
+          <ul>
+            <li><a href="#">Privacy & Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="cart.html">Shipping & Delivery</a></li>
+            <li><a href="contact.html">FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a href="#">Terms</a><a href="#">Privacy</a><a href="#">Security</a>
+        <a href="#">Status</a><a href="#">Community</a><a href="#">Contact</a
+        ><a href="#">Manage Cookies</a>
+      </div>
+      <div class="footer-copy">© 2026 Paper Clip, Inc</div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paper Clip – Help Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .help-wrapper {
+        padding: 0 2.5rem 3rem;
+        max-width: 900px;
+        max-height: 800px;
+        overflow-y: scroll;
+        padding-bottom: 3rem;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .help-title {
+        font-family: var(--font-serif);
+        font-size: 2.5rem;
+        letter-spacing: 0.18em;
+        text-align: center;
+        color: #a0b0c0;
+        padding: 1.5rem 0;
+      }
+
+      .help-actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-bottom: 2.5rem;
+      }
+
+      .help-btn {
+        padding: 0.7rem 2rem;
+        background: var(--black);
+        color: var(--white);
+        border: none;
+        border-radius: 8px;
+        font-family: var(--font-sans);
+        font-size: 0.82rem;
+        font-weight: 600;
+        cursor: pointer;
+        letter-spacing: 0.08em;
+        transition: opacity 0.2s;
+      }
+
+      .help-inner-content {
+        width: 100%;
+        max-width: 900px;
+        padding: 0 2.5rem;
+      }
+
+      .help-btn:hover {
+        opacity: 0.8;
+      }
+
+      .faq-layout {
+        display: grid;
+        margin-left: 20%;
+        grid-template-columns: 240px 1000px;
+        gap: 1rem;
+      }
+
+      .faq-nav h3 {
+        font-family: var(--font-sans);
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .faq-nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .faq-nav li {
+        font-size: 0.85rem;
+        color: var(--black);
+        cursor: pointer;
+      }
+
+      .faq-nav li:hover {
+        text-decoration: underline;
+      }
+
+      .faq-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .faq-item strong {
+        display: block;
+        font-size: 0.88rem;
+        font-weight: 700;
+        margin-bottom: 0.3rem;
+      }
+
+      .faq-item p {
+        font-size: 0.82rem;
+        color: var(--gray-dark);
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="./assets/logo.png" height="45px" width="90px" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html" class="active">CONTACT</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="search-bar">
+          <img src="./assets/search-icon.png" width="16px" height="16px" />
+          <input type="text" placeholder="Taking notes" />
+          <button class="clear-btn">✕</button>
+        </div>
+        <a href="profile.html"
+          ><img
+            src="./assets/profile-icon.png"
+            width="30px"
+            height="30px"
+            class="nav-icon"
+        /></a>
+        <a href="cart.html"
+          ><img
+            src="./assets/cart-icon.png"
+            width="30px"
+            height="30px"
+            class="nav-icon"
+          />
+        </a>
+      </div>
+    </nav>
+
+    <a href="shop.html" class="back-btn">< Back</a>
+    <h1 class="help-title">HELP CENTER</h1>
+
+    <div class="help-actions">
+      <button class="help-btn">
+        <a href="order-tracker.html">Track Order</a>
+      </button>
+      <button class="help-btn">Cancel Order</button>
+    </div>
+
+    <div class="faq-layout">
+      <div class="faq-nav">
+        <h3>FAQs</h3>
+        <ul>
+          <li>How do I place an order?</li>
+          <li>Can I modify or cancel my order after placing it?</li>
+          <li>Will I receive an order confirmation?</li>
+          <li>What payment methods do you accept?</li>
+          <li>Do you offer cash on delivery?</li>
+          <li>Can I place bulk or corporate orders?</li>
+          <li>Do you offer discounts or promo codes?</li>
+        </ul>
+      </div>
+      <div class="help-wrapper">
+        <div class="help-inner-content">
+          <div class="faq-content">
+            <div class="faq-item">
+              <strong>How do I place an order?</strong>
+              <p>
+                Simply click on a product and enter the amount of items you want
+                to buy before proceeding to add it to your card then checkout.
+              </p>
+            </div>
+            <div class="faq-item">
+              <strong>Can I modify or cancel my order after placing it?</strong>
+              <p>
+                Yes, it will be listed on the pending order under your shopping
+                cart and can be modified and cancelled unless its been shipped.
+              </p>
+            </div>
+            <div class="faq-item">
+              <strong>Will I receive an order confirmation?</strong>
+              <p>
+                After checking out a product, the customer will receive a
+                notification and it will be listed on the transaction history.
+              </p>
+            </div>
+            <div class="faq-item">
+              <strong>What payment methods do you accept?</strong>
+              <p>We accept e-wallet payments, and cash on delivery.</p>
+            </div>
+            <div class="faq-item">
+              <strong>Do you offer cash on delivery?</strong>
+              <p>Yes, PaperClip offers cash on delivery.</p>
+            </div>
+            <div class="faq-item">
+              <strong>Can I place bulk or corporate orders?</strong>
+              <p>
+                This depends on the stock the shop owner lists on their product
+                listing. If it isn't available, pre-ordering items can be done
+                as well.
+              </p>
+            </div>
+            <div class="faq-item">
+              <strong>Do you offer discounts or promo codes?</strong>
+              <p>
+                PaperClip offers discounts and promo codes monthly that can be
+                claimed.
+              </p>
+            </div>
+            <hr />
+
+            <div class="faq-item">
+              <strong>Where do you ship?</strong>
+              <p>We only currently deliver products in the Philippines.</p>
+            </div>
+
+            <div class="faq-item">
+              <strong>How long does delivery take?</strong>
+              <p>Around 3-7 business days after processing checkout.</p>
+            </div>
+
+            <div class="faq-item">
+              <strong>How much does shipping cost?</strong>
+              <p>
+                Shipping fee varies by location and will be shown along the
+                product at checkout. Do you offer free shipping? - Yes, we offer
+                free shipping codes from claimable promo codes.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <strong>How can I track my order?</strong>
+              <p>
+                Theres a tracking button for your orders that can be found on
+                your shopping cart or here in the help center.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <strong>What happens if I miss a delivery?</strong>
+              <p>
+                If your miss a delivery, the courier will attempt to redeliver
+                it or contact you through your listed phone number.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <strong
+                >Can I change my shipping address after placing an
+                order?</strong
+              >
+              <p>
+                ou can only change your shipping address before the order is
+                shipped.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <strong>Why is my order delayed?</strong>
+              <p>
+                Delays may occur due to weather, holidays, or courier issues.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="./assets/logo-white.png" height="85px" width="130px" />
+          </a>
+          <p class="footer-desc">
+            A well-crafted shop of trinkets and stationary for those who write &
+            dream of a better world.
+          </p>
+          <div class="footer-contact">
+            <div class="contact-row">
+              <img
+                src="./assets/location-icon.png"
+                width="16px"
+                height="16px"
+              />
+              0123 Silang, Cavite, Philippines
+            </div>
+            <div class="contact-row">
+              <img src="./assets/phone-call.png" width="14px" height="14px" />
+              +63901234356
+            </div>
+            <div class="contact-row">
+              <img src="./assets/email.png" width="14px" height="14px" />
+              paperclipph@gmail.com
+            </div>
+          </div>
+        </div>
+        <div class="footer-info">
+          <h4>INFORMATION</h4>
+          <ul>
+            <li><a href="#">Privacy & Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="cart.html">Shipping & Delivery</a></li>
+            <li><a href="contact.html">FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a href="#">Terms</a><a href="#">Privacy</a><a href="#">Security</a>
+        <a href="#">Status</a><a href="#">Community</a><a href="#">Contact</a
+        ><a href="#">Manage Cookies</a>
+      </div>
+      <div class="footer-copy">© 2026 Paper Clip, Inc</div>
+    </footer>
+  </body>
+</html>

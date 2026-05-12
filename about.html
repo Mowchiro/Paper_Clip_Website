@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paper Clip – About Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .about-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 800px;
+      }
+
+      .about-title {
+        font-family: var(--font-serif);
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-align: center;
+        color: #4a7c59;
+        padding: 1.5rem 0 0;
+      }
+
+      .about-banner-img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        background: url("./assets/about-us-banner.png");
+        display: block;
+      }
+
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        padding: 3rem 4rem;
+      }
+
+      .about-quote {
+        font-family: var(--font-serif);
+        font-size: 1.15rem;
+        font-weight: 700;
+        font-style: italic;
+        line-height: 1.5;
+        color: var(--black);
+        text-align: center;
+      }
+
+      .about-text {
+        font-size: 0.85rem;
+        line-height: 1.8;
+        color: var(--gray-dark);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="./assets/logo.png" height="45px" width="90px" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="about.html" class="active">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="search-bar">
+          <img src="./assets/search-icon.png" width="16px" height="16px" />
+          <input type="text" placeholder="Taking notes" />
+          <button class="clear-btn">✕</button>
+        </div>
+        <a href="profile.html"
+          ><img
+            src="./assets/profile-icon.png"
+            width="30px"
+            height="30px"
+            class="nav-icon"
+        /></a>
+        <a href="cart.html"
+          ><img
+            src="./assets/cart-icon.png"
+            width="30px"
+            height="30px"
+            class="nav-icon"
+          />
+        </a>
+      </div>
+    </nav>
+
+    <a href="shop.html" class="back-btn">< Back</a>
+
+    <div class="about-wrapper">
+      <h1 class="about-title">ABOUT US</h1>
+      <br />
+
+      <!-- Banner image -->
+      <div
+        style="
+          width: 100%;
+          height: 300px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 2rem;
+          width: 100%;
+          background: url(&quot;./assets/about-us-banner.png&quot;) center/cover
+            no-repeat;
+          padding: 2rem;
+          overflow: hidden;
+          position: relative;
+          overflow: hidden;
+        "
+      ></div>
+
+      <div class="about-content">
+        <p class="about-quote">
+          "The secret of getting ahead is getting started." — Mark Twain
+        </p>
+        <p class="about-text">
+          A static HTML website revolving around the world of an online store
+          that sells stationery items. This is a project for our Introduction to
+          Web Programming where we were mostly taught HTML and CSS in creating a
+          website. In Paper Clip, you will find your usual E-commerce pages such
+          as the home page that greets you with quotes or pictures to entice the
+          consumer into consuming the products we want to sell. You can also
+          find the Log In, or Sign up options for new users, this in theory is
+          where the system would store the user's transactions, orders,
+          favorites, added to cart products, etc. Third is the most important
+          part of the page, the shopping section. The shop section includes
+          various advertisements from different brands and maybe some ongoing
+          sales that the user might be interested in, it's also where they can
+          find the products listed. Theres also a contact page for user
+          feedback, contact, and customer services. Lastly, theres an admin for
+          store owners and such where they can track the list of orders,
+          profits, etc. That's all for my website, it's completely static and
+          serves no functions as of the moment since we have yet to learn how to
+          add the backend to our websites. :D
+        </p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="./assets/logo-white.png" height="85px" width="130px" />
+          </a>
+          <p class="footer-desc">
+            A well-crafted shop of trinkets and stationary for those who write &
+            dream of a better world.
+          </p>
+          <div class="footer-contact">
+            <div class="contact-row">
+              <img
+                src="./assets/location-icon.png"
+                width="16px"
+                height="16px"
+              />
+              0123 Silang, Cavite, Philippines
+            </div>
+            <div class="contact-row">
+              <img src="./assets/phone-call.png" width="14px" height="14px" />
+              +63901234356
+            </div>
+            <div class="contact-row">
+              <img src="./assets/email.png" width="14px" height="14px" />
+              paperclipph@gmail.com
+            </div>
+          </div>
+        </div>
+        <div class="footer-info">
+          <h4>INFORMATION</h4>
+          <ul>
+            <li><a href="#">Privacy & Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="cart.html">Shipping & Delivery</a></li>
+            <li><a href="contact.html">FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a href="#">Terms</a><a href="#">Privacy</a><a href="#">Security</a>
+        <a href="#">Status</a><a href="#">Community</a><a href="#">Contact</a
+        ><a href="#">Manage Cookies</a>
+      </div>
+      <div class="footer-copy">© 2026 Paper Clip, Inc</div>
+    </footer>
+  </body>
+</html>

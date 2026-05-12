@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Clip – Order Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+<style>
+.order-filters {
+    display: flex;
+    gap: 8px;
+}
+
+.filter-btn {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+.filter-btn.active {
+    background: #1a1a1a;
+    color: white;
+    border-color: #1a1a1a;
+}
+
+.filter-btn:hover:not(.active) {
+    background: #e0e0e0;
+}
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.pending {
+    background-color: #fff3cd; 
+    color: #856404;
+}
+
+.shipping {
+    background-color: #d1ecf1; 
+    color: #0c5460;
+}
+
+.shipped {
+    background-color: #d4edda; 
+    color: #155724;
+}
+
+/* Action Button */
+.view-btn {
+    background: #404040;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+.view-btn:hover {
+    background: #b8c8b0;
+    color: #1a1a1a;
+}
+
+.data-table tbody tr:hover {
+    background-color: #fcfcfc;
+}
+
+.data-table td {
+    font-size: 0.85rem;
+    color: #444;
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="index.html" class="logo">
+        <img src="./assets/logo.png" height="45px" width="90px" />
+    </a>
+    <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <div class="nav-right">
+        <div class="search-bar">
+            <img src="./assets/search-icon.png" width="16px" height="16px" />
+            <input type="text" placeholder="Search orders..." />
+            <button class="clear-btn">✕</button>
+        </div>
+        <a href="profile.html"><img src="./assets/profile-icon.png" width="30px" height="30px" class="nav-icon" /></a>
+    </div>
+</nav>
+
+<h1 class="dashboard-title">DASHBOARD</h1>
+
+<div class="dashboard-layout">
+    <nav class="sidebar">
+        <a href="dashboard.html">ADMIN DASHBOARD</a>
+        <a href="inventory.html">INVENTORY</a>
+        <a href="order-tracker.html" class="active">ORDER TRACKER</a>
+        <a href="settings.html">SETTINGS</a>
+    </nav>
+
+    <div class="dashboard-content">
+        <div class="dash-inner">
+            <div class="dash-section-header">
+                <h3>ORDER TRACK LIST</h3>
+                <div class="order-filters">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Pending</button>
+                    <button class="filter-btn">Shipping</button>
+                    <button class="filter-btn">Delivered</button>
+                </div>
+            </div>
+
+            <div style="padding: 1.5rem;">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Order No.</th>
+                            <th>Customer</th>
+                            <th>Contact</th>
+                            <th>Address</th>
+                            <th>Item</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1234</td>
+                            <td>Juan Dela Cruz</td>
+                            <td>091234567</td>
+                            <td>123 Cavite City</td>
+                            <td>Ballpoint Set</td>
+                            <td><span class="badge shipping">Shipping</span></td>
+                            <td><button class="view-btn">View</button></td>
+                        </tr>
+                        <tr>
+                            <td>1235</td>
+                            <td>Kristine Hong</td>
+                            <td>092738211</td>
+                            <td>Silang, Cavite</td>
+                            <td>Collectible Gacha</td>
+                            <td><span class="badge shipped">Shipped</span></td>
+                            <td><button class="view-btn">View</button></td>
+                        </tr>
+                        <tr>
+                            <td>1236</td>
+                            <td>Baby Lyn Marin</td>
+                            <td>093849822</td>
+                            <td>Dasma, Cavite</td>
+                            <td>BINI Keychain</td>
+                            <td><span class="badge pending">Pending</span></td>
+                            <td><button class="view-btn">View</button></td>
+                        </tr>
+                        <tr>
+                            <td>1237</td>
+                            <td>Keith Lacap</td>
+                            <td>092309112</td>
+                            <td>Dasma, Cavite</td>
+                            <td>Yellow Pad Paper</td>
+                            <td><span class="badge shipped">Shipped</span></td>
+                            <td><button class="view-btn">View</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

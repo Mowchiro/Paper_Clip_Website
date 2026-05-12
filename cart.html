@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paper Clip – Shopping Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="./assets/logo.png" height="45px" width="90px" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="search-bar">
+          <img src="./assets/search-icon.png" width="16px" height="16px" />
+          <input type="text" placeholder="Taking notes" />
+          <button class="clear-btn">✕</button>
+        </div>
+        <a href="profile.html"
+          ><img
+            src="./assets/profile-icon.png"
+            width="30px"
+            height="30px"
+            class="nav-icon"
+        /></a>
+        <a href="cart.html"
+          ><img
+            src="./assets/cart-icon.png"
+            width="30px"
+            height="30px"
+            class="nav-icon"
+          />
+        </a>
+      </div>
+    </nav>
+
+    <a href="shop.html" class="back-btn">< Back</a>
+
+    <h1 class="cart-page-title">SHOPPING CART</h1>
+
+    <div class="cart-wrapper">
+      <div class="cart-table">
+        <div class="cart-header">
+          <h3>PRODUCT DETAILS</h3>
+          <span class="cart-count">4 ITEMS</span>
+        </div>
+        <div class="cart-cols">
+          <span></span>
+          <span>QTY</span>
+          <span>PRICE</span>
+          <span>TOTAL</span>
+        </div>
+
+        <!-- Item 1 -->
+        <div class="cart-item">
+          <div class="cart-item-info">
+            <div class="cart-thumb"><img src="./assets/product-1.png" width="100%" height="100%" /></div>
+            <div>
+              <p class="cart-item-name">Compact Gel Ink Ballpoint Pen Cap Type (Set of 8)</p>
+              <div class="stars" style="font-size: 0.7rem">
+              <div class="stars">★★★★★<span>(138)</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="qty-control">
+            <p class="qty-btn">−</p>
+            <div class="qty-num">1</div>
+            <p class="qty-btn">+</p>
+          </div>
+          <div class="cart-price">₱100.00</div>
+          <div class="cart-price">₱100.00</div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="cart-item">
+          <div class="cart-item-info">
+            <div class="cart-thumb"><img src="./assets/product-2.png" width="100%" height="100%" /></div>
+            <div>
+              <p class="cart-item-name">Weekly Planner Sticky Note</p>
+              <div class="stars" style="font-size: 0.7rem">
+              <div class="stars">★★★★★<span>(138)</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="qty-control">
+            <button class="qty-btn">−</button>
+            <div class="qty-num">3</div>
+            <button class="qty-btn">+</button>
+          </div>
+          <div class="cart-price">₱100.00</div>
+          <div class="cart-price">₱300.00</div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="cart-item">
+          <div class="cart-item-info">
+            <div class="cart-thumb"><img src="./assets/product-3.png" width="100%" height="100%" /></div>
+            <div>
+              <p class="cart-item-name">
+                Planted Wood Ruled Craft Notebook (Pack of 5)
+              </p>
+              <div class="stars" style="font-size: 0.7rem">
+              <div class="stars">★★★★★<span>(138)</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="qty-control">
+            <p class="qty-btn">−</p>
+            <div class="qty-num">2</div>
+            <p class="qty-btn">+</p>
+          </div>
+          <div class="cart-price">₱60.00</div>
+          <div class="cart-price">₱120.00</div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="cart-item">
+          <div class="cart-item-info">
+            <div class="cart-thumb"><img src="./assets/product-4.png" width="100%" height="100%" /></div>
+            <div>
+              <p class="cart-item-name">
+                Plain Craft Ring Notebook
+              </p>
+              <div class="stars" style="font-size: 0.7rem">
+              <div class="stars">★★★★★<span>(138)</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="qty-control">
+            <p class="qty-btn">−</p>
+            <div class="qty-num">1</div>
+            <p class="qty-btn">+</p>
+          </div>
+          <div class="cart-price">₱150.00</div>
+          <div class="cart-price">₱150.00</div>
+        </div>
+      </div>
+
+      <!-- ORDER SUMMARY -->
+      <div class="order-summary">
+        <h3>ORDER SUMMARY</h3>
+
+        <div class="summary-row">
+          <span>ITEMS: 4</span>
+          <span>₱610.00</span>
+        </div>
+
+        <div>
+          <p style="font-size: 0.78rem; margin-bottom: 0.4rem">Shipping:</p>
+          <select class="shipping-select">
+            <option>Cash on Delivery</option>
+            <option>Gcash</option>
+          </select>
+        </div>
+
+        <div>
+          <p style="font-size: 0.78rem; margin-bottom: 0.4rem">
+            Enter Voucher:
+          </p>
+          <input type="text" class="voucher-input" />
+          <br /><br />
+          <button class="apply-btn">APPLY</button>
+        </div>
+
+        <div class="total-row">
+          <span>TOTAL COST:</span>
+          <span>₱610.00</span>
+        </div>
+
+        <button class="checkout-btn">CHECKOUT</button>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="./assets/logo-white.png" height="85px" width="130px" />
+          </a>
+          <p class="footer-desc">
+            A well-crafted shop of trinkets and stationary for those who write &
+            dream of a better world.
+          </p>
+          <div class="footer-contact">
+            <div class="contact-row">
+              <img
+                src="./assets/location-icon.png"
+                width="16px"
+                height="16px"
+              />
+              0123 Silang, Cavite, Philippines
+            </div>
+            <div class="contact-row">
+              <img src="./assets/phone-call.png" width="14px" height="14px" />
+              +63901234356
+            </div>
+            <div class="contact-row">
+              <img src="./assets/email.png" width="14px" height="14px" />
+              paperclipph@gmail.com
+            </div>
+          </div>
+        </div>
+        <div class="footer-info">
+          <h4>INFORMATION</h4>
+          <ul>
+            <li><a href="#">Privacy & Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="cart.html">Shipping & Delivery</a></li>
+            <li><a href="contact.html">FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a href="#">Terms</a><a href="#">Privacy</a><a href="#">Security</a>
+        <a href="#">Status</a><a href="#">Community</a><a href="#">Contact</a
+        ><a href="#">Manage Cookies</a>
+      </div>
+      <div class="footer-copy">© 2026 Paper Clip, Inc</div>
+    </footer>
+  </body>
+</html>

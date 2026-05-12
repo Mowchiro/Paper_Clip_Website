@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paper Clip – Admin Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="logo">
+        <img src="./assets/logo.png" height="45px" width="90px" />
+      </a>
+  <ul class="nav-links">
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="shop.html">SHOP</a></li>
+    <li><a href="about.html">ABOUT</a></li>
+    <li><a href="contact.html">CONTACT</a></li>
+  </ul>
+ <div class="nav-right">
+        <div class="search-bar">
+          <img src="./assets/search-icon.png" width="16px" height="16px" />
+          <input type="text" placeholder="Taking notes" />
+          <button class="clear-btn">✕</button>
+        </div>
+        <a href="profile.html"><img
+            src="./assets/profile-icon.png"
+            width="30px"
+            height="30px"
+            class="nav-icon"
+        /></a>
+        <a href="cart.html"><img
+          src="./assets/cart-icon.png"
+          width="30px"
+          height="30px"
+          class="nav-icon">
+        </a>
+      </div>
+</nav>
+
+<h1 class="dashboard-title">DASHBOARD</h1>
+
+<div class="dashboard-layout">
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <a href="dashboard.html" class="active">ADMIN DASHBOARD</a>
+    <a href="inventory.html">INVENTORY</a>
+    <a href="order-tracker.html">ORDER TRACKER</a>
+    <a href="settings.html">SETTINGS</a>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="dashboard-content">
+
+    <!-- SALES REVENUE + CHART -->
+    <div class="dash-inner">
+      <div class="dash-section-header">
+        <h3>SALES REVENUE</h3>
+        <span style="font-size:0.75rem; font-weight:600; letter-spacing:0.1em; cursor:pointer;">MONTH &gt;</span>
+      </div>
+      <div class="chart-area">
+        <!-- Chart -->
+        <div style="flex:0 0 380px;">
+          <div class="chart-legend">
+            <div class="legend-item"><div class="dot dot-blue"></div> Sales</div>
+            <div class="legend-item"><div class="dot dot-purple"></div> Views</div>
+            <div class="legend-item"><div class="dot dot-orange"></div> Add to cart</div>
+          </div>
+          <div class="simple-chart">
+            <svg class="chart-svg" viewBox="0 0 380 160" xmlns="http://www.w3.org/2000/svg">
+              <!-- Grid lines -->
+              <line x1="40" y1="10" x2="40" y2="140" stroke="#e0e0e0" stroke-width="1"/>
+              <line x1="40" y1="10" x2="370" y2="10" stroke="#e0e0e0" stroke-width="1"/>
+              <line x1="40" y1="40" x2="370" y2="40" stroke="#e0e0e0" stroke-width="1"/>
+              <line x1="40" y1="70" x2="370" y2="70" stroke="#e0e0e0" stroke-width="1"/>
+              <line x1="40" y1="100" x2="370" y2="100" stroke="#e0e0e0" stroke-width="1"/>
+              <line x1="40" y1="130" x2="370" y2="130" stroke="#e0e0e0" stroke-width="1"/>
+              <!-- Y labels -->
+              <text x="32" y="13" font-size="9" fill="#999" text-anchor="end">25</text>
+              <text x="32" y="43" font-size="9" fill="#999" text-anchor="end">20</text>
+              <text x="32" y="73" font-size="9" fill="#999" text-anchor="end">15</text>
+              <text x="32" y="103" font-size="9" fill="#999" text-anchor="end">10</text>
+              <text x="32" y="133" font-size="9" fill="#999" text-anchor="end">5</text>
+              <!-- X labels -->
+              <text x="75" y="150" font-size="9" fill="#999" text-anchor="middle">2021</text>
+              <text x="140" y="150" font-size="9" fill="#999" text-anchor="middle">2022</text>
+              <text x="205" y="150" font-size="9" fill="#999" text-anchor="middle">2023</text>
+              <text x="270" y="150" font-size="9" fill="#999" text-anchor="middle">2024</text>
+              <text x="335" y="150" font-size="9" fill="#999" text-anchor="middle">2025</text>
+              <!-- Sales line (blue) -->
+              <polyline points="75,100 140,88 205,82 270,76 335,15" fill="none" stroke="#4a90d9" stroke-width="2.5" stroke-linejoin="round"/>
+              <!-- Views line (purple) -->
+              <polyline points="75,112 140,104 205,88 270,76 335,40" fill="none" stroke="#9b59b6" stroke-width="2.5" stroke-linejoin="round"/>
+              <!-- Add to cart line (orange) -->
+              <polyline points="75,120 140,116 205,106 270,96 335,18" fill="none" stroke="#f5a623" stroke-width="2.5" stroke-linejoin="round"/>
+              <!-- Dots on lines -->
+              <circle cx="335" cy="15" r="4" fill="#4a90d9"/>
+              <circle cx="335" cy="40" r="4" fill="#9b59b6"/>
+              <circle cx="335" cy="18" r="4" fill="#f5a623"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-col">
+          <div class="stat-card">
+            <div class="stat-icon">📦</div>
+            <p class="stat-label">Total Orders</p>
+            <p class="stat-value">12</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🛍</div>
+            <p class="stat-label">Total Sales</p>
+            <p class="stat-value">25</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">💵</div>
+            <p class="stat-label">Total Profit</p>
+            <p class="stat-value" style="font-size:1.1rem;">₱23,126.00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ORDER TRACK LIST (mini) -->
+      <div style="padding:0 1.5rem 1.5rem;">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th colspan="4">ORDER TRACK LIST</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Order No.</strong></td>
+              <td><strong>Customer</strong></td>
+              <td><strong>Item</strong></td>
+              <td><strong>Status</strong></td>
+            </tr>
+            <tr><td>1234</td><td>Juan Dela Cruz</td><td>Ballpoint Set</td><td>Shipping</td></tr>
+            <tr><td>1235</td><td>Kristine Hong</td><td>Collectible Gacha ...</td><td>Shipped</td></tr>
+            <tr><td>1236</td><td>Baby Lyn Marin</td><td>BINI Keychain</td><td>Pending</td></tr>
+            <tr><td>1237</td><td>Keith Lacap</td><td>Yellow Pad Paper</td><td>Shipped</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
