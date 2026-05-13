@@ -1,5 +1,8 @@
 /* PAPER CLIP – Global Styles */
-
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
 :root {
   --black: #1a1a1a;
   --white: #ffffff;
